@@ -38,7 +38,7 @@ This vulnerability is running on (cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*, c
 
 author = "faisalfs10x"
 license = "Same as Nmap --See https://nmap.org/book/man-legal.html"
-categories = { "vuln" }
+categories = { "vuln","exploit" }
 
 portrule = shortport.http
 
