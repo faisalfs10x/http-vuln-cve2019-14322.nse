@@ -1,14 +1,18 @@
-description = [[
-CVE-2019-14322 - A vulnerability was found in Pallets Werkzeug up to 0.15.4. It has been declared as critical. This vulnerability affects the function SharedDataMiddleware of the component Windows. The manipulation with an unknown input leads to a directory traversal vulnerability. The CWE definition for the vulnerability is CWE-22.
-This script reads c:/windows/win.ini as a proof of concept.
-This vulnerability is running on (cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*, cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:x64:*)
-]]
-
 local http = require "http"
 local shortport = require "shortport"
 local vulns = require "vulns"
 local stdnse = require "stdnse"
 local string = require "string"
+
+description = [[
+
+CVE-2019-14322 - A vulnerability was found in Pallets Werkzeug up to 0.15.4. It has been declared as critical. 
+This vulnerability affects the function SharedDataMiddleware of the component Windows. 
+The manipulation with an unknown input leads to a directory traversal vulnerability. The CWE definition for the vulnerability is CWE-22.
+This script reads c:/windows/win.ini as a proof of concept.
+This vulnerability is running on (cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*, cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:x64:*)
+
+]]
 
 ---
 -- @usage
@@ -43,9 +47,13 @@ action = function(host, port)
     title = "Pallets Werkzeug path traversal via SharedDataMiddleware mishandles drive names (such as C:) in Windows pathnames",
     state = vulns.STATE.NOT_VULN,
     description = [[
-A vulnerability was found in Pallets Werkzeug up to 0.15.4. It has been declared as critical. This vulnerability affects the function SharedDataMiddleware of the component Windows. The manipulation with an unknown input leads to a directory traversal vulnerability. The CWE definition for the vulnerability is CWE-22.
+		
+A vulnerability was found in Pallets Werkzeug up to 0.15.4. It has been declared as critical. 
+This vulnerability affects the function SharedDataMiddleware of the component Windows. 
+The manipulation with an unknown input leads to a directory traversal vulnerability. The CWE definition for the vulnerability is CWE-22.
 This script reads c:/windows/win.ini as a proof of concept.
 This vulnerability is running on (cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*, cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:x64:*)
+		
     ]],
     IDS = {
         CVE = "CVE-2019-14322"
