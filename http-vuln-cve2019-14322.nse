@@ -73,7 +73,7 @@ This vulnerability is running on (cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*, c
 
  --local req = http.get(host, port, uri, options) 
  local vuln_report = vulns.Report:new(SCRIPT_NAME, host, port)
- local url = stdnse.get_script_args(SCRIPT_NAME..".url") or "/base_import/static/c:/windows/win.ini"
+ local arg_url = stdnse.get_script_args(SCRIPT_NAME..".url") or "/base_import/static/c:/windows/win.ini"
  local response = http.generic_request(host, port, "GET", "/base_import/static/c:/windows/win.ini", options)
 
  if response.status == 200 and string.match(response.body, "extensions" or "files" or "fonts")  then
