@@ -46,3 +46,8 @@
     
     Nmap done: 1 IP address (1 host up) scanned in 0.48 seconds
     
+    
+ # Published in:
+
+- https://github.com/nomi-sec/PoC-in-GitHub#cve-2019-14322-2019-07-28
+    
